@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Restaurant LLAMAFOOT</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; display: flex; flex-direction: column; }
+        header { background: #222; color: white; padding: 15px; text-align: center; font-size: 24px; }
+        nav { background: #701020; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 10px; text-decoration: none; padding: 10px; display: inline-block; cursor: pointer; }
+        .main-container { display: flex; padding: 20px; }
+        aside { width: 25%; background: #f4f4f4; padding: 15px; }
+        aside a { text-decoration: none; color: #800e13; display: block; margin-bottom: 8px; cursor: pointer; }
+        .content { width: 75%; padding: 15px; }
+        footer { background: #222; color: white; text-align: center; padding: 10px; margin-top: 20px; }
+        .section { display: none; }
+        .active { display: block; }
+    </style>
+</head>
+<body>
+    <header>
+        RESTAURANTE "LLAMAFOOT" 
+    </header>
+
+    <nav>
+        <a onclick="mostrarSeccion('inicio')">Inicio</a>
+        <a onclick="mostrarSeccion('carta')">Carta</a>
+        <a onclick="mostrarSeccion('reservas')">Reservas</a>
+        <a onclick="mostrarSeccion('contacto')">Contactos</a>
+    </nav>
+    
+    <div class="main-container">
+        <aside>
+            <h3>Categorías</h3>
+            <ul>
+                <li><a onclick="mostrarSeccion('bebidas')">Bebidas</a></li>
+                <li><a onclick="mostrarSeccion('menu')">Menú</a></li>
+                <li><a onclick="mostrarSeccion('cena')">Cena</a></li>
+            </ul>
+        </aside>
+        
+        <div class="content">
+            <!-- Sección Inicio -->
+            <div id="inicio" class="section active">
+                <h1>Bienvenido a "LLAMAFOOT"</h1>
+                <p>¿Para qué dejarlo para mañana lo que te puedes comer hoy?</p>
+            </div>
+
+           <div id="carta" class="section">
+    <h1>Nuestra Carta</h1>
+    <p>Platos tradicionales de la región de Cerro de Pasco, preparados con ingredientes locales y mucho sabor.</p>
+    
+    <h2>Especialidades de la Casa</h2>
+    <ul>
+        <li><strong>Caldo Verde:</strong> Sopa típica con papa, huevo, queso y hierbas de la zona - <em>S/ 12.00</em></li>
+        <li><strong>Pachamanca:</strong> Carne de cerdo, pollo y cuy cocidos bajo tierra con hierbas andinas - <em>S/ 25.00</em></li>
+        <li><strong>Trucha Frita:</strong> Trucha fresca de laguna, servida con papas nativas y ensalada - <em>S/ 20.00</em></li>
+        <li><strong>Papa con Queso:</strong> Entrada tradicional con papa sancochada y queso fresco - <em>S/ 8.00</em></li>
+    </ul>
+
+    <h2>Platos de Altura</h2>
+    <ul>
+        <li><strong>Picante de Cuy:</strong> Cuy tierno cocido en salsa de maní y ají panca - <em>S/ 28.00</em></li>
+        <li><strong>Yunca de Cordero:</strong> Guiso espeso con carne de cordero, papas, chuño y hierbas andinas - <em>S/ 22.00</em></li>
+        <li><strong>Chicharrón de Chancho:</strong> Carne crocante con mote y salsa criolla - <em>S/ 20.00</em></li>
+    </ul>
+
+    <p><em>Todos nuestros platos son preparados con productos frescos y locales, apoyando a los agricultores de la región.</em></p>
+</div>
+
+
+            <!-- Sección Reservas -->
+            <div id="reservas" class="section">
+                <h1>Haz tu Reserva llamando al 916446554</h1>
+                <p>Puedes reservar tu mesa desde aquí.</p>
+            </div>
+
+            <!-- Sección Contacto -->
+            <div id="contacto" class="section">
+                <h1>Contacto 916446554</h1>
+                <p>Estamos encantados de atenderte. Escríbenos o visítanos.</p>
+            </div>
+
+            <div id="bebidas" class="section">
+    <h1>Bebidas</h1>
+    <ul>
+        <li><strong>Chicha Morada:</strong> Refrescante bebida peruana hecha a base de maíz morado - <em>S/ 6.00</em></li>
+        <li><strong>Jugo de Maracuyá:</strong> Natural y sin azúcar añadida - <em>S/ 5.00</em></li>
+        <li><strong>Inka Kola:</strong> La bebida nacional - <em>S/ 4.00</em></li>
+        <li><strong>Café pasado:</strong> Fuerte y aromático - <em>S/ 4.50</em></li>
+        <li><strong>Cerveza Artesanal LLAMAFOOT:</strong> Rubia, Roja o Negra - <em>S/ 10.00</em></li>
+    </ul>
+</div>
+
+
+            <div id="menu" class="section">
+    <h1>Menú del Día</h1>
+    <p><strong>Disponible de lunes a viernes hasta las 3:00 p.m.</strong></p>
+    <ul>
+        <li><strong>Entrada:</strong> Papa a la huancaína</li>
+        <li><strong>Plato principal:</strong> Lomo saltado </li>
+        <li><strong>Bebida:</strong> Refresco de maracuyá</li>
+        <li><strong>Postre:</strong> Mazamorra morada</li>
+    </ul>
+    <p><em>Precio: S/ 12.50</em></p>
+</div>
+
+
+          <div id="cena" class="section">
+    <h1>Opciones de Cena</h1>
+    <ul>
+        <li><strong>Trucha a la parrilla:</strong> - <em>S/ 12.00</em></li>
+        <li><strong>Tallarines verdes con bistec:</strong> - <em>S/ 12.00</em></li>
+        <li><strong>Aji de gallina:</strong> - <em>S/ 12.00</em></li>
+    </ul>
+    <p>¡Ideal para cerrar el día con buen sabor!</p>
+</div>
+
+        </div>
+    </div>
+    
+    <footer>
+        &copy; 2025 - LLAMAFOOT. Todos los derechos reservados.
+    </footer>
+
+    <script>
+        function mostrarSeccion(id) {
+            const secciones = document.querySelectorAll('.section');
+            secciones.forEach(sec => sec.classList.remove('active'));
+            document.getElementById(id).classList.add('active');
+        }
+    </script>
+</body>
+</html>
